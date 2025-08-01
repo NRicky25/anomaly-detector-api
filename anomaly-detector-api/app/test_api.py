@@ -16,7 +16,7 @@ def test_valid_transaction():
     assert response.json()["prediction"] in ["OK", "FRAUD"]
 
 def test_negative_amount():
-    respone = client.post("/predict/", json={"V1": 0.1, "V2": -1.1, "V3": 0.5, "V4": -0.2, "V5": 0.3,
+    response = client.post("/predict/", json={"V1": 0.1, "V2": -1.1, "V3": 0.5, "V4": -0.2, "V5": 0.3,
         "V6": 1.2, "V7": -0.5, "V8": 0.4, "V9": -1.3, "V10": 0.8,
         "V11": -0.6, "V12": 1.0, "V13": -0.7, "V14": 0.9, "V15": 0.0,
         "V16": -0.4, "V17": 1.1, "V18": -0.3, "V19": 0.2, "V20": 0.1,
