@@ -29,6 +29,9 @@ class Transaction(BaseModel):
     V21: float; V22: float; V23: float; V24: float; V25: float
     V26: float; V27: float; V28: float; Amount: float
 
+    class Config:
+        extra = "allow"
+
     @field_validator("Amount")
     def check_amount(cls, value):
         if value < 0:
