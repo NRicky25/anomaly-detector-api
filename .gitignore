@@ -10,7 +10,9 @@
 *.onnx
 *.tar
 *.tar.gz
-*.env
+
+#enviroment key
+.env
 
 # Data and output directories
 data/

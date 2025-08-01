@@ -23,7 +23,7 @@ def test_negative_amount():
         "V21": -0.9, "V22": 0.6, "V23": 0.3, "V24": -0.8, "V25": 0.5,
         "V26": -0.1, "V27": 0.7, "V28": -0.6, "Amount": -10.00
         })
-    assert respone.status_code == 422 #Fail validation
+    assert response.status_code == 422 #Fail validation
 
 def test_missing_field():
     data = {
