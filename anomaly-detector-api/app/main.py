@@ -4,7 +4,7 @@ from pydantic import BaseModel, field_validator
 import joblib
 import numpy as np
 import os
-from app.utils import verify_api_key
+from .utils import verify_api_key
 from pathlib import Path
 
 BASE_DIR = Path(__file__).resolve().parent.parent 
@@ -30,7 +30,7 @@ class Transaction(BaseModel):
     V26: float; V27: float; V28: float; Amount: float
 
     class Config:
-        extra = Extra.allow
+        extra = "allow"
 
     @field_validator("Amount")
     def check_amount(cls, value):
