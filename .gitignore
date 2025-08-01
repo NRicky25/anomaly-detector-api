@@ -1,0 +1,28 @@
+# Common large files
+*.log
+*.csv
+*.tsv
+*.zip
+*.gz
+*.h5
+*.pt
+*.pkl
+*.onnx
+*.tar
+*.tar.gz
+
+# Data and output directories
+data/
+datasets/
+logs/
+checkpoints/
+outputs/
+runs/
+
+# Notebook checkpoints
+.ipynb_checkpoints/
+
+# Cache
+__pycache__/
+*.cache
+.cache/
