@@ -25,6 +25,7 @@ jobs:
 
       - name: Install dependencies
         run: |
+          cd anomaly-detector-api
           python -m pip install --upgrade pip
           pip install -r requirements.txt
           pip install pytest
