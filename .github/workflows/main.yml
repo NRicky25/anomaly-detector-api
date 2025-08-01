@@ -24,15 +24,21 @@ jobs:
           python-version: "3.11"
 
       - name: Install dependencies
+        working-directory: anomaly-detector-api # Set working directory for this step
         run: |
-          cd anomaly-detector-api
           python -m pip install --upgrade pip
           pip install -r requirements.txt
-          pip install pytest
+          pip install pytest # Consider adding pytest to requirements.txt
 
       - name: Run tests
+        working-directory: anomaly-detector-api # Set working directory for this step
         env:
-          WORKFLOW_API_KEY: ${{ secrets.WORKFLOW_API_KEY }}
+          API_KEY:
+            ${{ secrets.API_KEY }} # <--- CHANGE THIS LINE!
+            # Ensure your GitHub Secret is also named 'API_KEY'
+            # (not WORKFLOW_API_KEY)
         run: |
-          cd anomaly-detector-api
-          pytest app/test_api.py --disable-warnings
+          # PYTHONPATH is not strictly necessary if running pytest from the project root
+          # and referencing app/test_api.py, but it can help with imports.
+          # The path 'app/test_api.py' is relative to the working-directory.
+          PYTHONPATH=. pytest app/test_api.py --disable-warnings
