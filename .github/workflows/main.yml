@@ -32,4 +32,5 @@ jobs:
 
       - name: Run tests
         run: |
+          cd anomaly-detector-api
           pytest app/test_api.py --disable-warnings
