@@ -1,7 +1,13 @@
+import os
 from fastapi.testclient import TestClient
 from app.main import app
 
+
+API_KEY = os.getenv("API_KEY") or os.getenv("WORKFLOW_API_KEY")
+
 client = TestClient(app)
+
+HEADERS = {"x-api-key": API_KEY}
 
 def test_valid_transaction():
     response = client.post("/predict/", json={

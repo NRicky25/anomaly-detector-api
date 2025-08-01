@@ -30,7 +30,7 @@ class Transaction(BaseModel):
     V26: float; V27: float; V28: float; Amount: float
 
     class Config:
-        extra = "allow"
+        extra = Extra.allow
 
     @field_validator("Amount")
     def check_amount(cls, value):
