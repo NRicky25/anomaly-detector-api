@@ -1,1 +1,1 @@
-CI trigger test1
+CI trigger test2
