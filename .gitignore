@@ -26,3 +26,9 @@ runs/
 __pycache__/
 *.cache
 .cache/
+
+# Pytest cache folder
+.pytest_cache/
+
+# Test scripts
+test_api.py
