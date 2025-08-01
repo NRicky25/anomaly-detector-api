@@ -3,11 +3,12 @@ name: Run Tests
 on:
   push:
     branches:
-      - main # or your default branch
+      - main
       - ci-test
   pull_request:
-    - main # or your default branch
-    - ci-test
+    branches:
+      - main
+      - ci-test
 
 jobs:
   test:
