@@ -24,3 +24,4 @@ tzdata==2025.2
 uvicorn==0.35.0
 pytest
 httpx
+python-dotenv
