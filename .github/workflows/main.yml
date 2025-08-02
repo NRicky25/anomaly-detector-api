@@ -37,7 +37,7 @@ jobs:
         uses: docker/build-push-action@v5
         with:
           context: ${{ github.workspace }}
-          file: ${{ github.workspace }}/MyDockerfile # <-- CHANGED THIS LINE TO NEW FILENAME
+          file: ${{ github.workspace }}/Dockerfile # <-- CHANGED THIS LINE TO NEW FILENAME
           push: true
           tags: ${{ env.DOCKER_IMAGE_NAME }}:${{ env.DOCKER_IMAGE_TAG }}
           # Optional: Add build-args if your Dockerfile needs them, e.g., args: | YOUR_ARG=value
