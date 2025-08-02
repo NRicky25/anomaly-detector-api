@@ -35,5 +35,3 @@ EXPOSE 8000
 
 # Define the command to run your FastAPI application when the container starts
 CMD ["python", "-m", "uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "8000"]
-
-#docker run -d -p 8000:8000 --name fraud-api -e API_KEY='c4866723-16e2-442d-acb2-f8cb0af3570c' anomaly-detector-api:latest
