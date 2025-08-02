@@ -36,8 +36,8 @@ jobs:
       - name: Build and push Docker image
         uses: docker/build-push-action@v5
         with:
-          context: ${{ github.workspace }} # <-- CHANGED THIS LINE
-          file: ${{ github.workspace }}/Dockerfile # <-- CHANGED THIS LINE
+          context: ${{ github.workspace }}
+          file: ${{ github.workspace }}/MyDockerfile # <-- CHANGED THIS LINE TO NEW FILENAME
           push: true
           tags: ${{ env.DOCKER_IMAGE_NAME }}:${{ env.DOCKER_IMAGE_TAG }}
           # Optional: Add build-args if your Dockerfile needs them, e.g., args: | YOUR_ARG=value
