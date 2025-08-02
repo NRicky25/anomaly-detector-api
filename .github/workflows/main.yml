@@ -32,6 +32,9 @@ jobs:
           echo "DOCKER_IMAGE_NAME=${{ secrets.DOCKER_USERNAME }}/anomaly-detector-api" >> "$GITHUB_ENV"
           echo "DOCKER_IMAGE_TAG=latest" >> "$GITHUB_ENV" # You can also use ${{ github.sha }} for unique tags
 
+      - name: List files in context
+        run: ls -la
+
       - name: Build and push Docker image
         uses: docker/build-push-action@v5
         with:
